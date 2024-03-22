@@ -1,0 +1,36 @@
+<body class="background">
+<div class="container">
+    <div class="row" style="background-color: white;">
+        <!--Sobre mi-->
+        <div class="col-lg shadow border n-1">
+            <div class="text-center" >
+                <h2 style="color: black;">Sobre mi</h2> 
+                <img src="../../assets/no-profile-picture-icon.png" alt="foto de perfil" width="256" height="256" class="rounded-circle">
+                <p style="color: black;">Hola, soy un estudiante apasionado de programación full stack con experiencia en SQL Server, C#, Xamarin.Forms y MVC/MVVM. Me destaco por aprender rápidamente y trabajar bien en equipo. Disfruto de los desafíos y estoy emocionado por las oportunidades que el mundillo de la programación ofrece y estoy dispuesto a crecer, aprender y hacer un buen trabajo.</p>
+                <!--<p style="color: black;">{{descri.descripcion}}</p>-->
+            </div>
+            <div class="container text-center">
+                <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow-border">Descargar CV</button>
+            </div>
+        </div>
+        <!--Proyectos destacados-->
+
+        
+        <div class="col-lg shadow border n-1 section">
+            <div class="text-center">
+                <h2 style="color: black;">Proyecto destacado</h2>
+                <h4 style="color: black;">{{proyectoDestacado.name}}</h4>
+            </div>
+
+            <carousel>
+                <div *ngFor="let picture of proyectoDestacado.pictures">
+                    <slide><img src="{{picture}}" alt="slide" style="display: block; width: 100%;"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2" style="color: black;">{{proyectoDestacado.summary}}</p>
+            <p style="color: black;">Más proyectos en el apartado del portafolio</p>
+        </div>
+    </div>
+</div>
+</body>
